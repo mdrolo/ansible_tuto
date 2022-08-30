@@ -5,9 +5,9 @@
   tasks:
 
   - name: install apache & php package
-    package:
+    apt:
       name: 
-        - "{{ apache_package }}"
-        - "{{ php_package }}"
+        - apache2
+        - libapache2-mod-php
       state: latest
       update_cache: yes
